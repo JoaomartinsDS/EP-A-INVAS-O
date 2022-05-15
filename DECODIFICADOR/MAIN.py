@@ -36,4 +36,37 @@ while contadorm < m:
     ml = int(input(f'm{[contadorm]}: '))
     listm.append(ml)
     contadorm += 1
-aB
+
+#criador de lista n
+listn = []
+contadorn = 0
+while contadorn < n:
+    nl = int(input(f'n{[contadorn]}: '))
+    listn.append(nl)
+    contadorn += 1
+
+sm = 0
+for i in listm:
+    sm += i
+
+sd = 0
+
+while (sm != 0):
+    div = sm % 10
+    sm = sm // 10
+    sd = sd + div
+listaux = []
+sn = 0
+mult = 0
+numerador = 1
+if sd % 2 == 0:
+    print('método A')
+    bubble_sort(listn)
+    for i in listn:
+        sn += listn[mult] * mult
+        mult += 1
+else:
+    print('método B')
+    for i in listn:
+        listaux.append(numerador)
+
