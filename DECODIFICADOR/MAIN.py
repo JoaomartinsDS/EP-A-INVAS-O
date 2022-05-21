@@ -71,7 +71,7 @@ else:
     print('método B')
     for i in listn:
         listn[seq_b] += seq_1b
-        seq_b += seq_2b
+        seq_1b += seq_2b
         seq_2b +=1
         seq_b += 1
     for k in listn:
@@ -82,11 +82,11 @@ invdia = sn % 31
 if invdia == 0:
     invdia = 31
 invmes = sn % 12
-listmes=['dezembro','janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro']
+listmes=['dezembro','janeiro', 'fevereiro', 'março', 'abril','maio','junho','julho','agosto','setembro','outubro','novembro']
 mes = listmes[invmes]
 if mes == 'fevereiro' and invdia > 28:
     print('código corrompido!')
-elif mes == 'abril' or mes == 'junho' or mes == 'setembro' or mes == 'novembro' and day > 30:
+elif mes == 'abril' or mes == 'junho' or mes == 'setembro' or mes == 'novembro' and invdia > 30:
     print('código corrompido!')
 else:
     invasao = print(f'Invasão: {invdia} de {mes}')
